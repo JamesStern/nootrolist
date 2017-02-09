@@ -3,17 +3,25 @@
 		<ul>
 			<li>
 				<ul class="nootropic_title">
-				<li><h3>{{name}}</h3></li>
-				<li><a href="/brand/{{brand}}"><h4>{{brand}}</h4></a></li>
+					<li><h3>{{name}}</h3></li>
+
+					<li><a href="/brand/{{brand}}"><h4>{{brand}}</h4></a></li>
 				</ul>
-				<p>{{short_desc}}</p>
-				<h5>Ingredients:</h5>
-				<p>
-					{{#each ingredients}}
-						<span class="ingredient">{{name}} - {{amount}}</span>
-					{{/each}}
-				</p>
-				
+				<ul class="nootropic-info">
+					<li>
+						<p>{{short_desc}}</p>
+
+						<h5>Ingredients:</h5>
+						<p>
+							{{#each ingredients}}
+								<span class="ingredient">{{name}} - {{amount}}</span>
+							{{/each}}
+						</p>
+					</li>
+					<li>
+						<img src="{{image_url}}">
+					</li>
+				</ul>
 				<ul class="nootropic-categories">
 					<li><h5>Categories:</h5></li>
 					<li>
@@ -28,9 +36,7 @@
 					<li class="inline"><a class="btn" href="{{affiliate_url}}">Buy Now</a></li>
 				</ul>
 			</li>
-			<li>
-				<img src="{{image_url}}">
-			</li>
+			
 		</ul>
 	</article>
 </template>
