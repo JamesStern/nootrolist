@@ -1,0 +1,16 @@
+<template name="adminNootropics">
+	{{#if $.Session.get 'newNootropic'}}
+		{{> NewNootropic }}
+	{{else}}
+	<button class="new-nootropic">New Nootropic</button>
+	{{/if}}
+	<section class="nootropics">
+		{{#if Template.subscriptionsReady}}
+			{{#each nootropics}}
+				{{> adminNootropic }}
+			{{/each}}
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

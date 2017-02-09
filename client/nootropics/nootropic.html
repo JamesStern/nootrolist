@@ -1,0 +1,41 @@
+<template name="Nootropic">
+	<article class="nootropic">
+		<ul>
+			<li>
+				<ul class="nootropic_title">
+					<li><h3>{{name}}</h3></li>
+
+					<li><a href="/brand/{{brand}}"><h4>{{brand}}</h4></a></li>
+				</ul>
+
+				<p>{{short_desc}}</p>
+
+				<h5>Ingredients:</h5>
+				<p>
+					{{#each ingredients}}
+						<span class="ingredient">{{name}} - {{amount}}</span>
+					{{/each}}
+				</p>
+				
+				<ul class="nootropic-categories">
+					<li><h5>Categories:</h5></li>
+					<li>
+						{{#each category}}
+							<li class="ingredient"><a class="category-link" href="/{{name}}">{{name}}</a></li>
+						{{/each}}
+					</li>
+				</ul>
+
+				<ul class="nootropic_button">
+					<li class="inline"><a class="btn" href="/nootropic/{{_id}}">Learn More</a></li>
+					<li class="inline"><a class="btn" href="{{affiliate_url}}">Buy Now</a></li>
+				</ul>
+			</li>
+
+			<li>
+				<img src="{{image_url}}">
+			</li>
+			
+		</ul>
+	</article>
+</template>

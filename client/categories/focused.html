@@ -1,0 +1,12 @@
+<template name="Focused">
+	<h1 class="category-title">NOOTROPICS TO MAKE YOU FEEL FOCUSED</h1>	
+	<section class="nootropics">
+		{{#if Template.subscriptionsReady}}
+			{{#each focused_nootropics}}
+				{{> categoryNootropic }}
+			{{/each}}
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

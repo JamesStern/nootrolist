@@ -1,0 +1,13 @@
+<template name="Energized">
+	<h1 class="category-title">NOOTROPICS TO MAKE YOU FEEL ENERGIZED</h1>
+	
+	<section class="nootropics">
+		{{#if Template.subscriptionsReady}}
+			{{#each energized_nootropics}}
+				{{> categoryNootropic }}
+			{{/each}}
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

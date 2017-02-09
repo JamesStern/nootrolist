@@ -1,0 +1,21 @@
+<template name="HomeLayout">
+	{{> Header}}
+	<main>
+		<div class="billboard">
+			<h2>How do you want to feel?</h2>
+			<ul class="category_button">
+				<li class="inline"><a class="btn" href="/focused">Focused</a></li>
+				<li class="inline"><a class="btn" href="/energized">Energized</a></li>
+				<li class="inline"><a class="btn" href="/happy">Happy</a></li>
+				<li class="inline"><a class="btn" href="/calm">Calm</a></li>
+				<li class="inline"><a class="btn" href="/sleepy">Sleepy</a></li>
+			</ul>
+		</div>
+		<div class="home-layout">
+			<h1>ALL NOOTROPICS</h1>
+			{{> Template.dynamic template=main}}
+		</div>
+
+	</main>
+	{{> Footer }}
+</template>

@@ -1,0 +1,12 @@
+<template name="Calm">
+	<h1 class="category-title">NOOTROPICS TO MAKE YOU FEEL CALM</h1>	
+	<section class="nootropics">
+		{{#if Template.subscriptionsReady}}
+			{{#each calm_nootropics}}
+				{{> categoryNootropic }}
+			{{/each}}
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>
